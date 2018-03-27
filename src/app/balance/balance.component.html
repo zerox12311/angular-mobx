@@ -1,9 +1,9 @@
 <div *mobxAutorun>
   {{ count() }}
   <p>
-    Your bank account balance: $ {{account.getBalance()}}
+    Your bank account balance: $ {{account.balance}}
   </p>
-  <p *ngIf="account.isNegative()">
+  <p *ngIf="account.isNegative">
     Your account is overdraft
   </p>
 </div>

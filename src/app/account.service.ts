@@ -8,7 +8,7 @@ export class AccountService {
   @observable transactions: number[] = [];
   constructor() { }
 
-  getBalance(): number {
+  @computed get balance(): number {
     // console.log(sum(this.transactions));
     console.count('compute balance');
     return sum(this.transactions);
@@ -16,15 +16,15 @@ export class AccountService {
 
   }
 
-  isNegative(): boolean {
-    return this.getBalance() < 0;
+  @computed get isNegative(): boolean {
+    return this.balance < 0;
   }
 
-  deposit(money: number) {
+  @action deposit(money: number) {
     this.transactions = [...this.transactions, money];
   }
 
-  withdraw(money: number) {
+  @action withdraw(money: number) {
     this.transactions = [...this.transactions, -money];
   }
 }
