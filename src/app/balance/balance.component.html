@@ -1,0 +1,8 @@
+<div>
+  <p>
+    Your bank account balance: $ {{account.getBalance()}}
+  </p>
+  <p *ngIf="account.isNegative()">
+    Your account is overdraft
+  </p>
+</div>

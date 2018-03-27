@@ -1,0 +1,8 @@
+<div>
+  <input type="number" [(ngModel)]="amount">
+</div>
+
+<div>
+  <button (click)="account.deposit(amount)">deposit</button>
+  <button (click)="account.withdraw(amount)">withdraw</button>
+</div>
