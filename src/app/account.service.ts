@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { observable, computed, action } from 'mobx';
 import { sum } from 'lodash';
 
 
 @Injectable()
 export class AccountService {
-  transactions: number[] = [];
+  @observable transactions: number[] = [];
   constructor() { }
 
   getBalance(): number {

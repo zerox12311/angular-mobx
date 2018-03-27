@@ -8,6 +8,7 @@ import { BalanceComponent } from './balance/balance.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { FormsModule } from '@angular/forms';
 import { AccountService } from './account.service';
+import { MobxAngularModule } from 'mobx-angular';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AccountService } from './account.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MobxAngularModule
   ],
   providers: [AccountService],
   bootstrap: [AppComponent]
