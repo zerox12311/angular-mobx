@@ -8,7 +8,8 @@ export class AccountService {
   constructor() { }
 
   getBalance(): number {
-    console.log(sum(this.transactions));
+    // console.log(sum(this.transactions));
+    console.count('compute balance');
     return sum(this.transactions);
     // return this.transactions.reduce((a, b) => a + b, 0);
 

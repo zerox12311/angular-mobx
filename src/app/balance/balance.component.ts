@@ -11,9 +11,12 @@ export class BalanceComponent implements OnInit {
   constructor(private account: AccountService) { }
 
   ngOnInit() {
-    console.log(this.account.isNegative());
+    
   }
 
+  count() {
+    console.count('detect changes');
+  }
 
 
 
