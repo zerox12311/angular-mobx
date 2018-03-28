@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
-import { observable, computed, action } from 'mobx';
+import { observable, computed, action, autorun } from 'mobx';
 import { sum } from 'lodash';
 
 
 @Injectable()
 export class AccountService {
   @observable transactions: number[] = [];
-  constructor() { }
+
+  constructor() {
+    autorun(() => {
+      localStorage.savedTransactions = JSON.stringify(this.transactions);
+    })
+  }
 
   @computed get balance(): number {
     // console.log(sum(this.transactions));
